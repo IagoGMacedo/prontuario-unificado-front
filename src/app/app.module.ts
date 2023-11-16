@@ -10,6 +10,8 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { ContentComponent } from './content/content.component';
 
 import {MatInputModule} from '@angular/material/input';
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import {MatInputModule} from '@angular/material/input';
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    MatInputModule
+    MatInputModule,
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

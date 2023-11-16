@@ -1,3 +1,17 @@
-<form (ngSubmit)="onSubmitLogin()" #loginForm="ngForm">
+<div id="div_form">
+    <div id="div_central">
+        <form class="login-form">
+            <mat-form-field class="field-form">
+                <mat-label>CPF</mat-label>
+                <input matInput  placeholder="111.111.111-11">
+            </mat-form-field>
 
-</form>
+            <mat-form-field class="field-form">
+                <mat-label>senha</mat-label>
+                <input matInput type="password" >
+              </mat-form-field>
+
+              <button mat-raised-button color="primary">Primary</button>
+        </form>
+    </div>
+</div>
