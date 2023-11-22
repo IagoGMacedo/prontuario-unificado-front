@@ -12,13 +12,16 @@ import { ContentComponent } from './content/content.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
+import { AuthContentComponent } from './auth-content/auth-content.component';
+import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeContentComponent,
     LoginFormComponent,
-    ContentComponent
+    ContentComponent,
+    AuthContentComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,8 @@ import {MatButtonModule} from '@angular/material/button';
     FormsModule,
     MatInputModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
