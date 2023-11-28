@@ -19,7 +19,9 @@ export class ContentComponent {
         login: input.login,
         password: input.password
       }
-    );
+    ).then(response => {
+      this.axiosService.setAuthToken(response.data.token);
+    });
   }
 
   onRegister(input: any): void{
@@ -32,7 +34,9 @@ export class ContentComponent {
         login: input.login,
         password: input.password
       }
-    );
-  }
+    ).then(response => {
+        this.axiosService.setAuthToken(response.data.token);
+      });
+    }
 
 }

@@ -14,6 +14,8 @@ import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import { AuthContentComponent } from './auth-content/auth-content.component';
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { HomePagePatientComponent } from './home-page-patient/home-page-patient.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     WelcomeContentComponent,
     LoginFormComponent,
     ContentComponent,
-    AuthContentComponent
+    AuthContentComponent,
+    HomePagePatientComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatInputModule,
     MatCardModule,
     MatButtonModule,
-    MatTabsModule
+    MatTabsModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
