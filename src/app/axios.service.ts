@@ -1,23 +1,37 @@
 import { Injectable } from '@angular/core';
 import axios from 'axios';
+import { BehaviorSubject } from 'rxjs';
+import { UserModel } from './models/user.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AxiosService {
 
+  //state of the logged user
+  //based on an auth.service
+  private _isLoggedIn$ = new BehaviorSubject<boolean>(false);
+  isLoggedIn$ = this._isLoggedIn$.asObservable();
+  user!: UserModel;
+
   constructor() { 
     axios.defaults.baseURL = "http://localhost:8080"
     axios.defaults.headers.post["Content-type"] = "application/json"
+    if(this.getAuthToken() != null){
+      this.user = this.getUser(this.getAuthToken());
+    }
+    this._isLoggedIn$.next(!!this.getAuthToken());
   }
 
-  getAuthToken(): string | null{
+  getAuthToken(): any{
     return window.localStorage.getItem("auth_token");
   }
 
   setAuthToken(token: string | null): void{
     if(token != null){
       window.localStorage.setItem("auth_token", token);
+      this._isLoggedIn$.next(true);
+      this.user = this.getUser(token)
     } else{
       window.localStorage.removeItem("auth_token");
     }
@@ -35,6 +49,10 @@ export class AxiosService {
       url: url,
       data: data
     });
+  }
+
+  private getUser(token: string): UserModel{
+    return JSON.parse(atob(token.split('.')[1])) as UserModel;
   }
 
   
