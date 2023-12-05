@@ -12,11 +12,16 @@ import { ContentComponent } from './content/content.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatListModule} from '@angular/material/list';
 //import { AuthContentComponent } from './auth-content/auth-content.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatSidenavModule} from '@angular/material/sidenav';
+
 import { HomePagePatientComponent } from './home-page-patient/home-page-patient.component';
 import { HomePageProfessionalComponent } from './home-page-professional/home-page-professional.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +31,8 @@ import { HomePageProfessionalComponent } from './home-page-professional/home-pag
     ContentComponent,
     //AuthContentComponent,
     HomePagePatientComponent,
-    HomePageProfessionalComponent
+    HomePageProfessionalComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +43,10 @@ import { HomePageProfessionalComponent } from './home-page-professional/home-pag
     MatCardModule,
     MatButtonModule,
     MatTabsModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

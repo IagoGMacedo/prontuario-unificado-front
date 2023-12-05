@@ -1,0 +1,70 @@
+<!--
+<mat-toolbar>
+    <button mat-icon-button (click)="drawer.toggle();">
+        <mat-icon>menu</mat-icon>
+    </button>
+</mat-toolbar>
+<mat-drawer-container>
+    <mat-drawer #drawer mode="over">
+        <mat-nav-list>
+            <mat-list-item>
+                <button mat-button>
+                    <mat-icon>home</mat-icon>
+                    Pagina inicial
+                </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button>
+                    <mat-icon>account_circle</mat-icon>
+                    Dados pessoais
+                </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button>
+                    <mat-icon>exit_to_app</mat-icon>
+                    Sair
+                </button>
+            </mat-list-item>
+        </mat-nav-list>
+    </mat-drawer>
+    <mat-drawer-content>
+        <div style="height: 88vh;">
+            <p>conteudo fica aqui</p>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>
+-->
+<mat-toolbar style="background-color:#FAFAFA;">
+    <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+    </button>
+</mat-toolbar>
+<mat-sidenav-container>
+    <mat-sidenav #sidenav>
+        <mat-nav-list>
+            <mat-list-item>
+                <button mat-button>
+                    <mat-icon>home</mat-icon>
+                    Pagina inicial
+                </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button>
+                    <mat-icon>account_circle</mat-icon>
+                    Dados pessoais
+                </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button>
+                    <mat-icon>exit_to_app</mat-icon>
+                    Sair
+                </button>
+            </mat-list-item>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div style="height: 88vh;">
+            <p id="welcome">Bem vindo de volta, Iago</p>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
