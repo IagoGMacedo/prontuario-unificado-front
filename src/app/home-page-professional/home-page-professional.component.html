@@ -1,1 +1,45 @@
-<p>eu sou um profissional</p>
+<h1 >
+    Bem vindo de volta, {{this.axiosService.user.firstName}}
+</h1>
+<div id="div_btn">
+    <button class="btn_form" mat-icon-button>Cadastrar um novo laudo</button>
+    <button class="btn_form" mat-icon-button>Pesquisar paciente</button>
+</div>
+
+<h2>
+    Histórico de laudos cadastrados
+</h2>
+<div id="div_table">
+<table mat-table [dataSource]="exams" class="mat-elevation-z8">
+    <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef>Laudo</th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+  <!-- date Column -->
+  <ng-container matColumnDef="date">
+    <th mat-header-cell *matHeaderCellDef>Data</th>
+    <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+  </ng-container>
+
+  <!-- doctor Column -->
+  <ng-container matColumnDef="patient">
+    <th mat-header-cell *matHeaderCellDef>Paciente</th>
+    <td mat-cell *matCellDef="let element"> {{element.patient}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="action">
+    <th mat-header-cell *matHeaderCellDef>Visualizar</th>
+    <td mat-cell *matCellDef="let element"><button mat-icon-button><mat-icon>remove_red_eye</mat-icon></button> </td>
+  </ng-container>
+
+  <ng-container matColumnDef="delete">
+    <th mat-header-cell *matHeaderCellDef>Remover</th>
+    <td mat-cell *matCellDef="let element"><button mat-icon-button><mat-icon>delete</mat-icon></button> </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns" style="background-color: #D0D0D0;"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+</div>

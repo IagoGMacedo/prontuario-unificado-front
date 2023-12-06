@@ -1,17 +1,35 @@
-<app-sidenav></app-sidenav>
-<!--
-<mat-drawer-container class="example-container" autosize>
-    <mat-drawer #drawer class="example-sidenav" mode="side">
-      <p>Auto-resizing sidenav</p>
-      <ng-container *ngIf="showFiller">
-        <p>Lorem, ipsum dolor sit amet consectetur.</p>
-      </ng-container>
-    </mat-drawer>
-  
-    <div class="example-sidenav-content">
-      <button type="button" mat-button (click)="drawer.toggle()">
-        eu sou um paciente
-      </button>
-    </div>
-  </mat-drawer-container>
--->
+<h1 >
+    Bem vindo de volta, {{this.axiosService.user.firstName}}
+</h1>
+<h2>
+    Histórico de laudos
+</h2>
+<div id="div_table">
+<table mat-table [dataSource]="exams" class="mat-elevation-z8">
+    <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef>Laudo</th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+  <!-- date Column -->
+  <ng-container matColumnDef="date">
+    <th mat-header-cell *matHeaderCellDef>Data</th>
+    <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+  </ng-container>
+
+  <!-- doctor Column -->
+  <ng-container matColumnDef="doctor">
+    <th mat-header-cell *matHeaderCellDef>Médico</th>
+    <td mat-cell *matCellDef="let element"> {{element.doctor}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="action">
+    <th mat-header-cell *matHeaderCellDef>Visualizar</th>
+    <td mat-cell *matCellDef="let element"><button mat-icon-button><mat-icon>remove_red_eye</mat-icon></button> </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns" style="background-color: #D0D0D0;"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+</div>
