@@ -1,1 +1,22 @@
-<p>edit-profile works!</p>
+<form class="login-form" #registerForm="ngForm">
+    <div class="form-group" id="form_firstName">
+        <label >Insira seu primeiro nome</label>
+        <input  id="input_firstName" type="firstName" name="firstName"/>
+    </div>
+    <div class="form-group" id="form_lastName">
+        <label >Insira seu ultimo nome</label>
+        <input  id="input_lastName" type="lastName" name="lastName"/>
+    </div>
+    <div class="form-group" id="form_cpf">
+        <label >Insira seu CPF</label>
+        <input  id="input_cpf" maxlength="14" type="login" name="login"/>
+    </div>
+    <div class="form-group" id="form_senha" >
+        <label>Insira sua senha</label>
+        <input id="input_password"  type="password" name="password"/>
+    </div>
+    
+    <div class="form_buttons">
+        <button class="action_button" id="register_button">Registrar</button>
+    </div>
+</form>

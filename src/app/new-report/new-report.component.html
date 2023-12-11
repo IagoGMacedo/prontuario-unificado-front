@@ -1,0 +1,24 @@
+<h1 >
+    Cadastrar novo laudo
+</h1>
+<div id="form-report">
+    <div id="form-group">
+        <label >Paciente: </label>
+        <input  id="patientLogin" type="patientLogin" name="patientLogin" [(ngModel)]="patientLogin"/>
+    </div>
+    <div id="form-group">
+        <label >Tipo de laudo: </label>
+        <select  id="reportType" type="reportType" name="reportType">
+            <option>Hemograma</option>
+        </select>
+    </div>
+    <div id="form-group">
+        <label >Arquivo: </label>
+        <input type="file" (change)="onChangeFile($event)" accept=".csv">
+        <!-- 
+        <mat-icon>insert_drive_file</mat-icon>
+        -->
+    </div>
+</div>
+<button class="btn-function"id="first-button" (click)="onSubmitClick()">Cadastrar</button>
+

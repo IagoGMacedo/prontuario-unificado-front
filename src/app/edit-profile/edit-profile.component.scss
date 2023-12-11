@@ -1,0 +1,26 @@
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5px; /* Ajuste conforme necessário */
+  }
+
+  input{
+    display: block;
+    width: 300px;
+    margin-bottom: 25px;
+    height: 22px;
+    box-shadow: 0 4px 2px -2px gray;
+    border: 0px;
+    background-color: #CFCFCF;
+  }   
+  
+  button{
+    margin: 0 auto;
+    display: block;
+    width: 310px;
+    height: 27px;
+    margin-bottom: 15px;
+    border: 0px;
+    box-shadow: 0 4px 2px -2px gray;
+  
+  }

@@ -55,6 +55,12 @@
                 </button>
             </mat-list-item>
             <mat-list-item>
+                <button mat-button (click)="contentPage='newReport'">
+                    <mat-icon>ballot</mat-icon>
+                    Novo laudo
+                </button>
+            </mat-list-item>
+            <mat-list-item>
                 <button mat-button (click)="unload()">
                     <mat-icon>exit_to_app</mat-icon>
                     Sair
@@ -69,6 +75,11 @@
 
             <app-edit-profile *ngIf="contentPage == 'profile'">
             </app-edit-profile>
+
+            <app-new-report *ngIf="contentPage == 'newReport'">
+            </app-new-report>
+
+
         </div>
     </mat-sidenav-content>
 </mat-sidenav-container>

@@ -1,23 +1,35 @@
 h1{
-    font-family: 'Roboto', sans-serif;
+  margin-top: 10px;
+    font-family: 'Poppins','Roboto', sans-serif;
     margin-left: 187px;
+    font-size: 40px;
 }
 h2{
     margin-top: 102px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins','Roboto', sans-serif;
     margin-left: 187px;
-
+    font-size: 30px
 }
-
-.btn_form{
-  width: 100px;
-  height: 50px;
+#first-button{
+  margin-top: 60px;
+}
+.btn-function{
+  width: 200px;
+  height: 40px;
   margin-top: 10px;
-    background: #A7CED0;
-    font-size: small;
+  background: #A7CED0;
+  font-size: small;
+  display: block;
+  margin-left: 187px;
+  border-radius: 30px;
+  white-space: nowrap;
+  font-size: 15px;
+  border-color: transparent;
 }
 
-.div_btn {
-    display: flex;
-    flex-direction: column;
-  }
+#div_table{
+    margin-top: 50px;
+    margin-right: 120px;
+    margin-left: 120px;
+
+}

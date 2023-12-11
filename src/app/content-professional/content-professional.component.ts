@@ -11,9 +11,12 @@ export class ContentProfessionalComponent {
   contentPage: string;
   
   constructor(private axiosService : AxiosService, private router: Router){
+    //this.contentPage = "newReport";
     this.contentPage = "home";
+
   }
 
+  /** Comente isso para o hot reload funcionar */
   @HostListener('window:beforeunload', ['$event'])
   unloadHandler(event: Event) {
     this.axiosService.setAuthToken(null);

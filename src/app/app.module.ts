@@ -26,6 +26,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { ContentPatientComponent } from './content-patient/content-patient.component';
 import { ContentProfessionalComponent } from './content-professional/content-professional.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { NewReportComponent } from './new-report/new-report.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
     SidenavComponent,
     ContentPatientComponent,
     ContentProfessionalComponent,
-    EditProfileComponent
+    EditProfileComponent,
+    NewReportComponent
   ],
   imports: [
     BrowserModule,
