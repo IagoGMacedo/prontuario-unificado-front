@@ -19,6 +19,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatTableModule} from '@angular/material/table';
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { HomePagePatientComponent } from './home-page-patient/home-page-patient.component';
 import { HomePageProfessionalComponent } from './home-page-professional/home-page-professional.component';
@@ -27,6 +28,7 @@ import { ContentPatientComponent } from './content-patient/content-patient.compo
 import { ContentProfessionalComponent } from './content-professional/content-professional.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { NewReportComponent } from './new-report/new-report.component';
+import { DialogResponseResultComponent } from './dialog-response-result/dialog-response-result.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,8 @@ import { NewReportComponent } from './new-report/new-report.component';
     ContentPatientComponent,
     ContentProfessionalComponent,
     EditProfileComponent,
-    NewReportComponent
+    NewReportComponent,
+    DialogResponseResultComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +59,8 @@ import { NewReportComponent } from './new-report/new-report.component';
     MatToolbarModule,
     MatIconModule,
     MatListModule,
-    MatTableModule
+    MatTableModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

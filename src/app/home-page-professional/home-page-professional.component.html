@@ -1,7 +1,7 @@
 <h1 >
     Bem vindo de volta, {{this.axiosService.user.firstName}}
 </h1>
-    <button class="btn-function"id="first-button">Cadastrar um novo laudo</button>
+    <button class="btn-function"id="first-button" (click)="this.contentProfessional.contentPage='newReport'">Cadastrar um novo laudo</button>
     <button class="btn-function">Pesquisar paciente</button>
 
 <h2>
