@@ -1,7 +1,7 @@
 export interface Exam{
-    name:string;
+    name?:string;
+    patientName?:string;
     date:string;
-    doctor:string;
-    id:string;
-    patient:string;
+    id?:string;
+    professionalName:string;
 }

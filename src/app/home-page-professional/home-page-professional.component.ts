@@ -13,7 +13,7 @@ export class HomePageProfessionalComponent {
   axiosService : AxiosService;
   contentProfessional : ContentProfessionalComponent;
   exams : Exam[] = [
-    {id:"1", date: new Date("2003-01-29").toDateString(), doctor:"benevides", name:"Hemograma", patient:"iago"}
+    {id:"1", date: new Date("2003-01-29").toDateString(), professionalName:"benevides", name:"Hemograma", patientName:"iago"}
   ];
   displayedColumns = ['name','date','patient','action','delete'];
 

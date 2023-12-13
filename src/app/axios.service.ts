@@ -31,7 +31,8 @@ export class AxiosService {
     if(token != null){
       window.localStorage.setItem("auth_token", token);
       this._isLoggedIn$.next(true);
-      this.user = this.getUser(token)
+      this.user = this.getUser(token);
+      console.log("user setado "+this.user.login)
     } else{
       window.localStorage.removeItem("auth_token");
     }
@@ -43,7 +44,8 @@ export class AxiosService {
     if(this.getAuthToken() != null){
       headers = {"Authorization": "Bearer "+this.getAuthToken()};
     }
-
+    console.log("informações da request");
+    console.log(headers, method, url, data, queryParams);
     return axios({
       headers: headers,
       method: method,
@@ -54,7 +56,8 @@ export class AxiosService {
   }
 
   private getUser(token: string): UserModel{
-    return JSON.parse(atob(token.split('.')[1])) as UserModel;
+    let jsonContent = JSON.parse(atob(token.split('.')[1]));
+    return {firstName: jsonContent.firstName, lastname: jsonContent.lastName, role: jsonContent.role, login: jsonContent.iss};
   }
 
   
