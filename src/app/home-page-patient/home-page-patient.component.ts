@@ -12,10 +12,10 @@ import { MatTableDataSource } from '@angular/material/table';
 export class HomePagePatientComponent {
   showFiller = false;
   axiosService : AxiosService;
-  exams : Exam[] = [
-    {date: new Date("2003-01-29").toDateString(), professionalName:"benevides", name:"Hemograma", patientName:"iago"}
-  ];
+  exams : any[] = [];
+  
   displayedColumns = ['name','date','professionalName','action'];
+  //displayedColumns = ['name','professionalName','action'];
 
   constructor(private pAxiosService: AxiosService){
     this.axiosService = pAxiosService;
@@ -25,7 +25,7 @@ export class HomePagePatientComponent {
  
   
   checkForExams(){
-    this.exams.push({date: new Date("2003-01-29").toDateString(), professionalName:"benevides", name:"Hemograma", patientName:"iago"})
+    //this.exams.push({date: new Date("2003-01-29").toDateString(), professionalName:"benevides", name:"Hemograma", patientName:"iago"})
     console.log("check for exams");
     console.log(this.axiosService.user.login);
     this.axiosService.request(
@@ -35,8 +35,9 @@ export class HomePagePatientComponent {
       response => {
         console.log(response.data);
         for(const object of response.data){
-          this.exams.push({name:"Hemograma",patientName: object.patientName, professionalName: object.professionalName, date: new Date("2003-01-29").toDateString()});
+          //this.exams.push({name:"Hemograma",patientName: object.patientName, professionalName: object.professionalName, date: new Date("2003-01-29").toDateString()});
         }
+        this.exams = response.data;
         console.log(this.exams);
       }
     );

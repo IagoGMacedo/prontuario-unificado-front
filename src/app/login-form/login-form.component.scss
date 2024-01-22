@@ -71,7 +71,8 @@ input{
   background-color: #CFCFCF;
 }   
 
-button{
+
+.mat-mdc-raised-button.color-button{
   margin: 0 auto;
   display: block;
   width: 310px;
@@ -79,17 +80,12 @@ button{
   margin-bottom: 15px;
   border: 0px;
   box-shadow: 0 4px 2px -2px gray;
-
-}
-
-.action_button{
   background-color: #A7CED0;
 }
 
 
 .form_buttons{
   margin-top: 60px;
-
 }
 
 h1{

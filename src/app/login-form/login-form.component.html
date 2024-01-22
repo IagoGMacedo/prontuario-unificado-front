@@ -15,7 +15,7 @@
                             <!--LOGIN FORM-->
                             <form class="login-form" (ngSubmit)="onSubmitLogin()" #loginForm="ngForm">
                                 <div class="form-group" id="form_cpf">
-                                    <label >Insira seu CPF</label>
+                                    <label >Insira seu login</label>
                                     <input  id="input_cpf" maxlength="14" type="login" name="login" [(ngModel)]="login"/>
                                 </div>
                                 <div class="form-group" id="form_senha" >
@@ -24,7 +24,12 @@
                                 </div>
                                 
                                 <div class="form_buttons">
-                                    <button class="action_button" id="login_button">Login</button>
+                                    <!--
+                                        <button  id="login_button">Login</button>
+                                    -->
+                                    <button mat-raised-button class="color-button">Login</button>
+
+                                    
                                 </div>
                             </form>
                         </mat-tab>
@@ -39,7 +44,7 @@
                                     <input  id="input_lastName" type="lastName" name="lastName" [(ngModel)]="lastName"/>
                                 </div>
                                 <div class="form-group" id="form_cpf">
-                                    <label >Insira seu CPF</label>
+                                    <label >Insira seu login</label>
                                     <input  id="input_cpf" maxlength="14" type="login" name="login" [(ngModel)]="login"/>
                                 </div>
                                 <div class="form-group" id="form_senha" >
@@ -48,7 +53,7 @@
                                 </div>
                                 
                                 <div class="form_buttons">
-                                    <button class="action_button" id="register_button">Registrar</button>
+                                    <button mat-raised-button class="color-button">Registrar</button>
                                 </div>
                             </form>
                         </mat-tab>

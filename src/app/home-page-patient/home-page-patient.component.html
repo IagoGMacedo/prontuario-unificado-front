@@ -2,10 +2,12 @@
 <h2>Histórico de laudos</h2>
 <div id="div_table">
 <table mat-table [dataSource]="exams" class="mat-elevation-z8">
+  <!--
+  <!--
     <!-- Name Column -->
   <ng-container matColumnDef="name">
     <th mat-header-cell *matHeaderCellDef>Laudo</th>
-    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    <td mat-cell *matCellDef="let element"> Hemograma </td>
   </ng-container>
 
   <!-- date Column -->
@@ -13,7 +15,7 @@
     <th mat-header-cell *matHeaderCellDef>Data</th>
     <td mat-cell *matCellDef="let element"> {{element.date}} </td>
   </ng-container>
-
+-->
   <!-- doctor Column -->
   <ng-container matColumnDef="professionalName">
     <th mat-header-cell *matHeaderCellDef>Médico</th>
