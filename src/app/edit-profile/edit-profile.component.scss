@@ -1,3 +1,12 @@
+.edit-content{
+  margin-left: 187px;
+}
+
+h1{
+  font-size: 40px;
+}
+
+
 .form-group {
     display: flex;
     flex-direction: column;
@@ -14,13 +23,18 @@
     background-color: #CFCFCF;
   }   
   
-  button{
-    margin: 0 auto;
+
+
+  .mat-mdc-raised-button.action_button{
+    width: 200px;
+    height: 40px;
+    margin-top: 10px;
+    background: #A7CED0;
+    font-size: small;
     display: block;
-    width: 310px;
-    height: 27px;
-    margin-bottom: 15px;
-    border: 0px;
-    box-shadow: 0 4px 2px -2px gray;
-  
-  }
+    margin-left: 700px;
+    border-radius: 30px;
+    white-space: nowrap;
+    font-size: 15px;
+    border-color: transparent;
+    }

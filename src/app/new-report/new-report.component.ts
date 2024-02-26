@@ -3,6 +3,7 @@ import { CsvService } from '../csv.service';
 import { AxiosService } from '../axios.service';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogResponseResultComponent } from '../dialog-response-result/dialog-response-result.component';
+import { UserModel } from '../models/user.model';
 
 @Component({
   selector: 'app-new-report',
@@ -17,6 +18,7 @@ export class NewReportComponent {
   constructor(private csvService : CsvService, private axiosService : AxiosService, public dialog: MatDialog){
     this.patientLogin = "";
     this.requestBodyString = "";
+    
   }
 
 
@@ -56,6 +58,8 @@ export class NewReportComponent {
       data: contentString
     });
   }
+
+  
 
   
   

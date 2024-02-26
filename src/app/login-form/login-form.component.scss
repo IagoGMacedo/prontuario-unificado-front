@@ -45,13 +45,21 @@ body{
   align-items: center; /* Centraliza horizontalmente */
 }
 
+.center-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
 .form-group {
   display: flex;
   flex-direction: column;
   margin-bottom: 0.5px; /* Ajuste conforme necessário */
 }
 
-#form_cpf{
+#form_cpf_login{
   margin-top: 40px;
 }
 
@@ -85,7 +93,7 @@ input{
 
 
 .form_buttons{
-  margin-top: 60px;
+  margin-top: 30px;
 }
 
 h1{

@@ -4,8 +4,10 @@
 
 
         <div id="div_central">
-            <div id="div_esquerda">
+            <div id="div_esquerda" class="center-img">
                 <!-- aqui vai ficar a logo -->
+                <img  src="../../assets/images/castelar_logo.png" alt="profile picture" width="430" height="430"
+                >
             </div>
 
             <div id="div_direita">
@@ -14,7 +16,7 @@
                         <mat-tab label="Login">
                             <!--LOGIN FORM-->
                             <form class="login-form" (ngSubmit)="onSubmitLogin()" #loginForm="ngForm">
-                                <div class="form-group" id="form_cpf">
+                                <div class="form-group" id="form_cpf_login">
                                     <label >Insira seu login</label>
                                     <input  id="input_cpf" maxlength="14" type="login" name="login" [(ngModel)]="login"/>
                                 </div>

@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-login-form',
@@ -15,6 +16,10 @@ export class LoginFormComponent {
   password: string = "";
   firstName:string = "";
   lastName:string = "";
+
+  constructor(private titleService: Title){
+    this.titleService.setTitle('Prontuário - Entrar');
+  }
 
   onLoginTab(): void {
     this.active = "login";

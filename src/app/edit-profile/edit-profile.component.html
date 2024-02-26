@@ -1,22 +1,27 @@
-<form class="login-form" #registerForm="ngForm">
-    <div class="form-group" id="form_firstName">
-        <label >Insira seu primeiro nome</label>
-        <input  id="input_firstName" type="firstName" name="firstName"/>
-    </div>
-    <div class="form-group" id="form_lastName">
-        <label >Insira seu ultimo nome</label>
-        <input  id="input_lastName" type="lastName" name="lastName"/>
-    </div>
-    <div class="form-group" id="form_cpf">
-        <label >Insira seu login</label>
-        <input  id="input_cpf" maxlength="14" type="login" name="login"/>
-    </div>
-    <div class="form-group" id="form_senha" >
-        <label>Insira sua senha</label>
-        <input id="input_password"  type="password" name="password"/>
-    </div>
-    
-    <div class="form_buttons">
-        <button class="action_button" id="register_button">Registrar</button>
-    </div>
-</form>
+<div class="edit-content">
+    <h1 >
+        Editar dados pessoais
+    </h1>
+    <form class="login-form" #registerForm="ngForm">
+        <div class="form-group" id="form_firstName">
+            <label >Insira seu primeiro nome</label>
+            <input id="input_firstName" type="firstName" name="firstName" value="{{this.axiosService.user.firstName}}"/>
+        </div>
+        <div class="form-group" id="form_lastName">
+            <label >Insira seu ultimo nome</label>
+            <input  id="input_lastName" type="lastName" name="lastName" value="{{this.axiosService.user.lastname}}"/>
+        </div>
+        <div class="form-group" id="form_cpf">
+            <label >Insira seu login</label>
+            <input  id="input_cpf" maxlength="14" type="login" name="login" value="{{this.axiosService.user.login}}"/>
+        </div>
+        <div class="form-group" id="form_senha" >
+            <label>Insira sua senha</label>
+            <input id="input_password"  type="password" name="password"/>
+        </div>
+        
+        <div class="form_buttons">
+            <button mat-raised-button class="action_button"id="register_button">Editar</button>
+        </div>
+    </form>
+</div>

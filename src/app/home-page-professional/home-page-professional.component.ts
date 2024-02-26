@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AxiosService } from '../axios.service';
 import { Exam } from '../models/exam.model';
 import { ContentProfessionalComponent } from '../content-professional/content-professional.component';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home-page-professional',
@@ -17,8 +18,12 @@ export class HomePageProfessionalComponent {
   ];
   displayedColumns = ['name','date','patient','action','delete'];
 
-  constructor(private pAxiosService: AxiosService, private pcontentProfessional : ContentProfessionalComponent){
+  constructor(private titleService: Title ,private pAxiosService: AxiosService, private pcontentProfessional : ContentProfessionalComponent){
     this.axiosService = pAxiosService;
     this.contentProfessional = pcontentProfessional;
+    this.titleService.setTitle('Prontuário - Profissional');
+
   };
+
+
 }

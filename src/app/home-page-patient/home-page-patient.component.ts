@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AxiosService } from '../axios.service';
 import { Exam } from '../models/exam.model';
 import { MatTableDataSource } from '@angular/material/table';
+import { Title } from '@angular/platform-browser';
+import { UserModel } from '../models/user.model';
 
 
 @Component({
@@ -17,9 +19,10 @@ export class HomePagePatientComponent {
   displayedColumns = ['name','date','professionalName','action'];
   //displayedColumns = ['name','professionalName','action'];
 
-  constructor(private pAxiosService: AxiosService){
+  constructor(private titleService : Title,private pAxiosService: AxiosService){
     this.axiosService = pAxiosService;
     this.checkForExams();
+    this.titleService.setTitle('Prontuário - Paciente');
   };
 
  
@@ -42,6 +45,7 @@ export class HomePagePatientComponent {
       }
     );
   }
+
 
   
 }
